@@ -42,20 +42,19 @@ def line_print(n):
 
 #Logo banner
 banner = f"""
-{red}        ____    ___  ____   ____   __ __      __ __  __ __  _      ____     ___  ____  
- |    |  /  _]|    \ |    \ |  T  T    |  T  ||  T  T| T    |    \   /  _]|    \ 
- l__  | /  [_ |  D  )|  D  )|  |  |    |  |  ||  |  || |    |  _  Y /  [_ |  D  )
- __j  |Y    _]|    / |    / |  ~  |    |  |  ||  |  || l___ |  |  |Y    _]|    / 
-/  |  ||   [_ |    \ |    \ l___, |    l  :  !|  :  ||     T|  |  ||   [_ |    \ 
-\  `  ||     T|  .  Y|  .  Y|     !     \   / l     ||     ||  |  ||     T|  .  Y
- \____jl_____jl__j\_jl__j\_jl____/       \_/   \__,_jl_____jl__j__jl_____jl__j\_j
+{red}                  __  ___          ____                ____                     
+          /  |/  /___ _____/ / /_  ____ __   __/ __ \_      ______  _____
+         / /|_/ / __ `/ __  / __ \/ __ `/ | / / / / / | /| / / __ \/ ___/
+        / /  / / /_/ / /_/ / / / / /_/ /| |/ / /_/ /| |/ |/ / / / (__  ) 
+       /_/  /_/\__,_/\__,_/_/ /_/\__,_/ |___/\____/ |__/|__/_/ /_/____/  
+
                                                                                  
 {cyan}    
 {yellow}  
 {blue}   
 {red} 
-{blue}A Jerry Vulnerability Scanner Tool For Termux
-{red}  Made by jerry Telegram:-  @sedxjerryhacking
+{blue}A Madhav Vulnerability Scanner Tool For Termux/Linux
+{red}  Made by Madhav Telegram:-  @xmdhav
 {yellow}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
  """
 
@@ -72,7 +71,7 @@ def logo():
    
 
 def exit_msg():
-  line_print("\n" + info2 + green + "Thanks for using Jerry vulnerability!\n" + no_colour)
+  line_print("\n" + info2 + green + "Thanks for using Madhav vulnerability!\n" + no_colour)
   os.system("clear")
   exit(0)
 # Define the endpoint or URL where the IDOR vulnerability might exist
@@ -145,7 +144,7 @@ def test_request(url, method):
 
 def analyze_response(url, method, status_code, response_text):
     if status_code == 200:
-        print(success + f"Potential Jerry vulnerability found for URL: {url} | Method: {method} | Status Code: {status_code}")
+        print(success + f"Potential Madhav vulnerability found for URL: {url} | Method: {method} | Status Code: {status_code}")
 
         for sensitive_endpoint in sensitive_endpoints:
             sensitive_url = urljoin(base_url, sensitive_endpoint)
@@ -156,7 +155,7 @@ def analyze_response(url, method, status_code, response_text):
             else:
                 print(error + f"No sensitive data accessed at endpoint: {sensitive_endpoint}")
     else:
-        print(error + f"No Jerry vulnerability found for URL: {url} | Method: {method} | Status Code: {status_code}")
+        print(error + f"No Madhav vulnerability found for URL: {url} | Method: {method} | Status Code: {status_code}")
 
 def main():
     target_url = input(ask + "Enter Your Target's URL: ")
